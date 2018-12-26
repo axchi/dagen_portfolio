@@ -1,65 +1,246 @@
 @import "./styles/base";
 @import "./styles/modal";
+@import "./styles/page";
 
-$secondaryColor: #6D0839;
-$primaryColor: #D0E799;
 
-h1 {
-	color: #000000;
-	font-size: 1.6em;
-}
+// 
+// h1 {
+// 	// color: $secondaryColor;
+// 	// font-size: 5em;
+	
+// }
 
-.portfolio {
-	display: grid;
-	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: repeat(10, 1fr);
-	background: $secondaryColor;
-	height: 100vh;
+// li {
+// 	display: block;
+// 	font-size: 2rem;
+// 	font-family: skolar-sans-latin, sans-serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	margin-top: 10px;
+// 	// text-align: right;
 
-	&-divider {
-		grid-column: 6/11;
-		grid-row: 1/11;
-		background: $primaryColor;
-	}
+// 	span {
+// 		border-bottom: 1px solid $primaryColor;
+// 	}
+// }
 
-	&-intro {
-		grid-column: 3/9;
-		grid-row: 2/9;
-		background: $primaryColor;
-		box-shadow: 17px 14px 20px 0px #0000001a;
-	}
+// .link-primary {
+// 	font-size: 1.2em;
+// 	color: $secondaryColor;
+// 	display: block;
+// 	font-weight: 900;
+// 	text-decoration: none;
+// 	// text-align: right;
+// 	margin-top: 35px;
+	
+// 	span {
+// 		border-bottom: 1px solid $secondaryColor;
+// 	}
 
-	.nested-grid {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(5, 1fr);
-		height: 100%;
-	}
 
-	h1 {
-		grid-column:1/3;
-		grid-row: 1/6;
-	}
+// 	&.__reverse {
+// 		color: $primaryColor;
 
-	&-intro--media {
+// 		span {
+// 			border-bottom: 1px solid $primaryColor;
+// 		}
+// 	}
+// }
 
-		grid-column:3/6;
-		grid-row: 1/6;
-		align-self: end;
+// .portfolio {
+// 	display: grid;
+// 	grid-template-columns: repeat(10, 1fr);
+// 	grid-template-rows: repeat(10, 1fr);
+// 	background: $secondaryColor;
+// 	height: 100vh;
 
-		img {
-  			width: 100%;
-		}
-	}
-}
-.projects {
-	display: grid;
-	grid-template-rows: repeat(4, 1fr);
-	background: palevioletred;
-	height: 100vh;
+// 	&-divider {
+// 		grid-column: 6/11;
+// 		grid-row: 1/11;
+// 		background: $bgLight;
+// 	}
 
-	.item {
-		padding: 20px;
-		background: pink;
-	}
-}
+// 	&-intro {
+// 		grid-column: 3/9;
+// 		grid-row: 2/9;
+// 		background: $bgLight;
+// 		box-shadow: 17px 14px 20px 0px #0000001a;
+// 	}
+
+// 	.nested-grid {
+// 		display: grid;
+// 		grid-template-columns: repeat(5, 1fr);
+// 		grid-template-rows: repeat(5, 1fr);
+// 		height: 100%;
+// 	}
+
+// 	h1 {
+// 		grid-column:1/3;
+// 		grid-row: 1/6;
+// 	}
+
+// 	&-intro--media {
+
+// 		grid-column:3/6;
+// 		grid-row: 1/6;
+// 		align-self: end;
+
+// 		img {
+//   			width: 100%;
+// 		}
+// 	}
+// }
+// .projects {
+
+// 	.pj-wrapper {
+// 		min-height: 100vh;
+// 		width: 100%;
+// 		display: grid;
+// 		grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));		
+// 	}
+	
+// 	h3 {
+// 		padding: 10%;
+// 		font-size: 4em;
+//     	font-weight: 900;
+// 		color: $secondaryColor;
+// 		max-width: 80vw;
+// 	}
+
+// 	.link-primary {
+// 		text-align: left;
+// 	}
+
+// 	&-list {
+// 		min-height: 35vh;
+// 		padding: 5%;
+// 		display: flex;
+// 		flex-flow: column wrap;
+// 		justify-content: space-evenly;
+// 	}
+
+// 	&-list:nth-child(odd) {
+// 		background: $bgDark;
+// 		grid-column-end: span 2;
+// 	}
+
+// 	&-list:nth-child(even) {
+// 		background: $secondaryColor;
+// 		grid-column-end: span 3;
+// 	}
+	
+// 	&-list:nth-child(3) {
+// 		grid-column-end: span 3;
+// 		background: $bgLight;
+
+// 		.projects-list__header {
+// 			color: $secondaryColor;
+// 		}
+// 	}
+// 	&-list:nth-child(4) {
+// 		background: $bgDark;
+// 		grid-column-end: span 2;
+
+// 		.projects-list__header {
+// 			color: $primaryColor;
+// 		}
+// 	}
+
+// 	&-list__header {
+// 		color: $primaryColor;
+// 		font-weight: 900;
+// 		font-size: 1.5em;
+// 	}
+
+// 	&-list__content {
+// 		color: $bgLight;
+// 	}
+
+// 	li {
+// 		font-size: 15px;
+// 	}
+// 	h4 {
+// 		// margin-top: 20px;
+// 	}
+
+// 	p {
+// 		margin-top: 15px;
+// 	}
+// }
+
+
+// $height-mask: 250px;
+
+// To regulate alpha is recommended to use gray scale.
+// Recomiendo utilizar escala de grises
+
+// $darken: 60%;
+
+// $color: rgb(255,255,255);
+// $color-alpha: darken( $color, $darken );
+
+// // Apply color here!
+// // Todo el color que quieras!
+// $color-base: rgb(0,0,0);
+
+// html {
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-rendering: optimizelegibility;
+// }
+
+// html,
+// body{
+//   height: 100%;
+// }
+
+// body{
+//   font-family: 'Open Sans', sans-serif;
+// }
+
+// .text{
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: $height-mask;
+//   z-index: 10;
+// }
+// svg{
+//   width: 100%;
+//   height: inherit;
+//   text{
+//     // svg center text.
+//     // centar text svg.
+//     text-anchor: middle;
+//   }
+//   #alpha{
+//     fill: $color-alpha;
+//     //animation: alpha 10s ease infinite;
+//   }
+//   #title{
+//     letter-spacing: -2px;
+//     font-size: 6em;
+//     font-weight: 800;
+//   }
+//   #subtitle{
+//     letter-spacing: 8px;
+//     font-size: 1.2em;
+//     font-weight: 300;
+//     text-transform: uppercase;
+//   }
+//   #base{
+//     fill: $color-base;
+//     // add the mask.
+//     // aplicar máscara.
+//     mask: url(#mask);
+//   }
+// }
+
+// section.intro{
+//   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg) no-repeat top center;
+//   background-size: cover;
+//   position: relative;
+//   width: 100%;
+//   min-height: 100%;
+// }

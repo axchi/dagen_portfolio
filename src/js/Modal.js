@@ -1,3 +1,4 @@
+import anime from 'animejs';
 
 const modal = function(){
     let modal = document.querySelector(".js-modal--content");

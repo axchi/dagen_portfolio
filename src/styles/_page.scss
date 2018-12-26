@@ -1,0 +1,50 @@
+$secondaryColor: #baf135;
+$primaryColor:   #6D0839;
+$bgLight: #ffffff;
+$bgDark: #000;
+
+$primaryBg: #6D0839;
+
+body {
+    background: $primaryBg;
+}
+
+.portfolio {
+    width: 97%;
+    padding: 10% 5% 5%;
+    margin: 0 auto;
+    background-color: #fff;
+    clear: both;
+}
+
+.portfolio-intro {
+
+    margin: 0 auto;
+    width: 65%;
+    .indent {
+        display: block;
+        float: left; 
+        color: $primaryColor;
+        font-weight: 800;
+        font-size: 3rem; 
+        margin-top: -8px;
+        margin-right: 45px;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        line-height:2rem;
+        font-weight: normal;
+
+        span {
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #baf135;
+        }
+    }
+}
+
+
+
+
