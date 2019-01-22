@@ -1,9 +1,14 @@
 $secondaryColor: #baf135;
-$primaryColor:   #6D0839;
+$primaryColor: #6D0839;
 $bgLight: #ffffff;
 $bgDark: #000;
 
 $primaryBg: #6D0839;
+
+$lightGray: #74777b;
+$darkGray: #3e3c39;
+
+$footerHeight: 250px;
 
 body {
     background: $primaryBg;
@@ -14,37 +19,111 @@ body {
     padding: 10% 5% 5%;
     margin: 0 auto;
     background-color: #fff;
-    clear: both;
-}
+    position: relative;
+    z-index: 100;
+    margin-bottom: $footerHeight;
 
-.portfolio-intro {
+    &-intro {
 
-    margin: 0 auto;
-    width: 65%;
-    .indent {
-        display: block;
-        float: left; 
-        color: $primaryColor;
-        font-weight: 800;
-        font-size: 3rem; 
-        margin-top: -8px;
-        margin-right: 45px;
-        margin-bottom: 8px;
+        margin: 0 auto;
+        width: 65%;
+
+        .indent {
+            display: block;
+            float: left;
+            color: $primaryColor;
+            font-weight: 800;
+            font-size: 3rem;
+            margin-top: -8px;
+            margin-right: 45px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: normal;
+
+            span {
+                text-decoration: underline;
+                text-decoration-style: dashed;
+                text-decoration-color: #baf135;
+            }
+        }
     }
 
-    h1 {
-        font-size: 1.5rem;
-        line-height:2rem;
-        font-weight: normal;
+    &-projects {
+        margin-top: 10%;
 
-        span {
-            text-decoration: underline;
-            text-decoration-style: dashed;
-            text-decoration-color: #baf135;
+        h2 {
+            font-size: 3rem;
+            color: $primaryColor;
+            font-weight: 900;
+            // vertical-align: middle;
+            // background-color: $primaryColor;
+            // box-shadow: -0.5rem 0 0 $primaryColor, 0.7rem 0 0 $primaryColor;
+        }
+
+        h3 {
+            margin-top: 5px;
+            font-size: 1rem;
+            margin-bottom: 10%;
+            color: #717171;
+            font-weight: 100;
+        }
+
+        &--list {
+            position: relative;
+            margin-bottom: 150px;
+        }
+
+        &--content {
+            position: relative;
+            right: 0;
+            background: white;
+            padding: 5%;
+            width: 66%;
+            margin-left: 34%;
+            box-shadow: -4px 6px 20px 6px #3e3c392e;
+        }
+
+        &--img {
+            position: absolute;
+            top: 10%;
+            width: 80%;
+            height: 80%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .tabs-style-underline nav li a::after {
+            background: $primaryColor;
+        }
+
+        .tabs nav li.tab-current a {
+            color: $darkGray;
+        }
+
+        .tabs-style-underline nav a {
+            color: $lightGray;
+            text-decoration: none;
         }
     }
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: $footerHeight;
 
-
-
+    section {
+        width: 80%;
+        margin: 0 auto;
+        padding: 5%;
+    }
+}
