@@ -7,6 +7,9 @@ $primaryBg: #6D0839;
 
 $lightGray: #74777b;
 $darkGray: #3e3c39;
+$tabletSize: 768px;
+$tabletSize2: 992px;
+$phoneSize: 576px;
 
 $footerHeight: 250px;
 
@@ -26,23 +29,47 @@ body {
     &-intro {
 
         margin: 0 auto;
-        width: 65%;
+        width: 100%;
+        margin-bottom: 15%;
+
+        @media (min-width: $tabletSize) {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $tabletSize2) {
+            width: 65%;
+        }
 
         .indent {
             display: block;
             float: left;
             color: $primaryColor;
             font-weight: 800;
-            font-size: 3rem;
+            font-size: 2rem;
             margin-top: -8px;
-            margin-right: 45px;
-            margin-bottom: 8px;
+            margin-right: 15px;
+
+
+            @media (min-width: $phoneSize) {
+                margin-right: 45px;
+                font-size: 2.5rem;
+                margin-bottom: 8px;
+            }
+
+            @media (min-width: $tabletSize) {
+                font-size: 3rem;
+            }
         }
 
         h1 {
-            font-size: 1.5rem;
-            line-height: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
             font-weight: normal;
+
+            @media (min-width: $phoneSize) {
+                font-size: 1.3rem;
+                line-height: 2rem;
+            }
 
             span {
                 text-decoration: underline;
@@ -56,25 +83,42 @@ body {
         margin-top: 10%;
 
         h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             color: $primaryColor;
             font-weight: 900;
+            margin-bottom: 5%;
             // vertical-align: middle;
             // background-color: $primaryColor;
             // box-shadow: -0.5rem 0 0 $primaryColor, 0.7rem 0 0 $primaryColor;
+
+            @media (min-width: $phoneSize) {
+                font-size: 2.5rem;
+                margin-bottom: 2%;
+            }
+
+            @media (min-width: $tabletSize) {
+                font-size: 3rem;
+            }
+
+
         }
+
 
         h3 {
             margin-top: 5px;
             font-size: 1rem;
-            margin-bottom: 10%;
+            margin-bottom: 5%;
             color: #717171;
             font-weight: 100;
         }
 
         &--list {
             position: relative;
-            margin-bottom: 150px;
+            margin-bottom: 10%;
+
+            @media (min-width: $tabletSize2) {
+                margin-bottom: 150px;
+            }
         }
 
         &--content {
@@ -82,17 +126,26 @@ body {
             right: 0;
             background: white;
             padding: 5%;
-            width: 66%;
-            margin-left: 34%;
+            width: 100%;
             box-shadow: -4px 6px 20px 6px #3e3c392e;
+
+            @media (min-width: $tabletSize2) {
+                width: 66%;
+                margin-left: 34%;
+            }
         }
 
         &--img {
-            position: absolute;
-            top: 10%;
-            width: 80%;
-            height: 80%;
+            width: 100%;
             overflow: hidden;
+
+            @media (min-width: $tabletSize2) {
+
+                position: absolute;
+                top: 10%;
+                width: 80%;
+                height: 80%;
+            }
 
             img {
                 width: 100%;
@@ -112,6 +165,16 @@ body {
             text-decoration: none;
         }
     }
+
+    .content-wrap section p {
+        font-size: .9rem;
+        min-height: 0;
+
+        @media (min-width: $tabletSize2) {
+            font-size: 1rem;
+            min-height: 50vh;
+        }
+    }
 }
 
 footer {
@@ -125,5 +188,11 @@ footer {
         width: 80%;
         margin: 0 auto;
         padding: 5%;
+        color: white;
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
