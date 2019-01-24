@@ -396,12 +396,22 @@ body {
 
 .portfolio {
   width: 97%;
-  padding: 10% 5% 5%;
+  padding: 25% 5% 5%;
   margin: 0 auto;
   background-color: #fff;
   position: relative;
   z-index: 100;
   margin-bottom: 250px;
+}
+@media (min-width: 576px) {
+  .portfolio {
+    padding: 15% 5% 5%;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio {
+    padding: 10% 5% 5%;
+  }
 }
 .portfolio-intro {
   margin: 0 auto;
@@ -500,6 +510,8 @@ body {
   padding: 5%;
   width: 100%;
   box-shadow: -4px 6px 20px 6px #3e3c392e;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 @media (min-width: 992px) {
   .portfolio-projects--content {
@@ -513,14 +525,35 @@ body {
 }
 @media (min-width: 992px) {
   .portfolio-projects--img {
+    cursor: pointer;
+    -webkit-filter: grayscale(100);
+            filter: grayscale(100);
     position: absolute;
     top: 10%;
     width: 80%;
     height: 80%;
+    z-index: 0;
+    transition: -webkit-filter 500ms ease-in-out;
+    transition: filter 500ms ease-in-out;
+    transition: filter 500ms ease-in-out, -webkit-filter 500ms ease-in-out;
+  }
+  .portfolio-projects--img:hover {
+    z-index: 10;
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    transition: z-index 800ms 200ms, -webkit-filter 700ms ease-in;
+    transition: z-index 800ms 200ms, filter 700ms ease-in;
+    transition: z-index 800ms 200ms, filter 700ms ease-in, -webkit-filter 700ms ease-in;
   }
 }
 .portfolio-projects--img img {
   width: 100%;
+}
+@media (min-width: 992px) {
+  .portfolio-projects--img:hover + div {
+    opacity: 0.5;
+    transition: opacity 300ms ease-in-out;
+  }
 }
 .portfolio-projects .tabs-style-underline nav li a::after {
   background: #6D0839;
@@ -539,8 +572,21 @@ body {
 @media (min-width: 992px) {
   .portfolio .content-wrap section p {
     font-size: 1rem;
+  }
+}
+.portfolio .content-wrap section {
+  padding: 1em 0;
+}
+@media (min-width: 992px) {
+  .portfolio .content-wrap section {
+    padding: 1em;
     min-height: 50vh;
   }
+}
+.portfolio .content-wrap section a:link,
+.portfolio .content-wrap section a:visited,
+.portfolio .content-wrap section a:hover {
+  color: #6D0839;
 }
 
 footer {
@@ -559,6 +605,13 @@ footer section {
 footer p {
   margin-top: 20px;
   margin-bottom: 20px;
+  max-width: 500px;
+  line-height: 1.5rem;
+}
+footer a:link,
+footer a:visited,
+footer a:hover {
+  color: white;
 }
 
 /* Default tab style */

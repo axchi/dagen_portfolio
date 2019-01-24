@@ -19,12 +19,20 @@ body {
 
 .portfolio {
     width: 97%;
-    padding: 10% 5% 5%;
+    padding: 25% 5% 5%;
     margin: 0 auto;
     background-color: #fff;
     position: relative;
     z-index: 100;
     margin-bottom: $footerHeight;
+
+    @media (min-width: $phoneSize) {
+        padding: 15% 5% 5%;
+    }
+
+    @media (min-width: $tabletSize) {
+        padding: 10% 5% 5%;
+    }
 
     &-intro {
 
@@ -128,6 +136,8 @@ body {
             padding: 5%;
             width: 100%;
             box-shadow: -4px 6px 20px 6px #3e3c392e;
+            opacity: 1;
+            transition: opacity 300ms ease-in-out;
 
             @media (min-width: $tabletSize2) {
                 width: 66%;
@@ -139,16 +149,36 @@ body {
             width: 100%;
             overflow: hidden;
 
-            @media (min-width: $tabletSize2) {
 
+            @media (min-width: $tabletSize2) {
+                cursor: pointer;
+                filter: grayscale(100);
                 position: absolute;
                 top: 10%;
                 width: 80%;
                 height: 80%;
+                z-index: 0;
+                transition: filter 500ms ease-in-out;
+
+
+                &:hover {
+                    z-index: 10;
+                    filter: grayscale(0);
+                    transition: z-index 800ms 200ms, filter 700ms ease-in;
+                }
+
             }
 
             img {
                 width: 100%;
+            }
+        }
+
+        @media (min-width: $tabletSize2) {
+            &--img:hover+div {
+                opacity: 0.5;
+                transition: opacity 300ms ease-in-out;
+
             }
         }
 
@@ -172,7 +202,22 @@ body {
 
         @media (min-width: $tabletSize2) {
             font-size: 1rem;
+        }
+    }
+
+    .content-wrap section {
+        padding: 1em 0;
+
+
+        @media (min-width: $tabletSize2) {
+            padding: 1em;
             min-height: 50vh;
+        }
+
+        a:link,
+        a:visited,
+        a:hover {
+            color: $primaryColor;
         }
     }
 }
@@ -194,5 +239,13 @@ footer {
     p {
         margin-top: 20px;
         margin-bottom: 20px;
+        max-width: 500px;
+        line-height: 1.5rem;
+    }
+
+    a:link,
+    a:visited,
+    a:hover {
+        color: white
     }
 }
