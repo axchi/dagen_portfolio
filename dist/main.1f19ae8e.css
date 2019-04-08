@@ -393,7 +393,7 @@ body {
   background-color: #fff;
   position: relative;
   z-index: 100;
-  margin-bottom: 250px;
+  margin-bottom: 285px;
 }
 @media (min-width: 576px) {
   .portfolio {
@@ -586,7 +586,7 @@ footer {
   bottom: 0;
   z-index: 0;
   width: 100%;
-  height: 250px;
+  height: 285px;
 }
 footer section {
   width: 80%;
